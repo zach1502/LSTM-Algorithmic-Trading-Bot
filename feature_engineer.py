@@ -210,10 +210,10 @@ indicators = {
     'MFI_300': (calculate_MFI, (TimeWindows.long.value)),
 }
 
-output_file = './full_btc_usdt_data_feature_engineered.csv'
+output_file = './btc_usdt_data/full_btc_usdt_data_feature_engineered.csv'
 
 i=0
-for chunk in pd.read_csv('./full_btc_usdt_data_cleaned.csv', chunksize=chunk_size):
+for chunk in pd.read_csv('./btc_usdt_data/full_btc_usdt_data_cleaned.csv', chunksize=chunk_size):
     processed_chunk, overlap = process_chunk(chunk, overlap, indicators, window_size)
 
     processed_chunk.to_csv(output_file, mode='a', header=not os.path.exists(output_file), index=False)

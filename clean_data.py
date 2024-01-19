@@ -3,7 +3,7 @@ import os
 import pandas as pd
 
 chunk_size = 10 ** 6
-output_file = 'full_btc_usdt_data_cleaned.csv'
+output_file = './btc_usdt_data/full_btc_usdt_data_cleaned.csv'
 headers = ['Open time', 'Open', 'High', 'Low', 'Close', 'Volume', 'Close time', 'Quote asset volume', 'Number of trades', 'Taker buy base asset volume', 'Taker buy quote asset volume', 'Ignore']
 
 def clean_data(df):
