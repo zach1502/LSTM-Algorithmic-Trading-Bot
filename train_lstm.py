@@ -124,12 +124,6 @@ if __name__ == "__main__":
     mse = mean_squared_error(y_test_tensor, y_pred)
     print(f"Mean Squared Error: {mse}")
 
-    if (mse >= 1472):
-        print("Did not outperform previous best model. ")
-        print("Saving model...")
-        torch.save(best_model, f'lstm_model_{int(mse)}.pt')
-        exit(1)
-
     history = best_model.history
 
     plt.figure(figsize=(12, 6))
