@@ -53,6 +53,6 @@ def download_and_process_data(start_date, end_date, symbol='BTCUSDT', interval='
 if not os.path.exists('btc_usdt_data'):
     os.makedirs('btc_usdt_data')
 
-start_date = datetime(2023, 3, 11)
-end_date = datetime(2023, 3, 18) # datetime.now()
+start_date = datetime(2023, 12, 27)
+end_date = datetime.now()
 download_and_process_data(start_date, end_date)
