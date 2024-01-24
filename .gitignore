@@ -1,5 +1,5 @@
 btc_usdt_training_data
-paper_trade_data
+paper_trade_*
 trading_alg_tuning_data
 lstm_model_1472.pt
 scaler.pkl

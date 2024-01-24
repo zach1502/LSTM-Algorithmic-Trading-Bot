@@ -113,11 +113,11 @@ def run_simulation(params):
             fee = investment * trading_fee_percentage
             rounded_investment = round(investment - fee, 6)
             assets_bought = (rounded_investment / asset_price)
-            assets_held += assets_bought
+            assets_held += round(assets_bought, 8)
             current_budget -= rounded_investment
         elif trend_direction == 'down' and confidence <= sell_threshold and assets_held > 0:
             assets_to_sell = assets_held * sell_percentage * abs(confidence)
-            sale_revenue = assets_to_sell * asset_price
+            sale_revenue = round(assets_to_sell, 8) * asset_price
             fee = sale_revenue * trading_fee_percentage
             assets_held -= assets_to_sell
             current_budget += round(sale_revenue - fee, 6)
