@@ -6,9 +6,11 @@ This bot is meant to trade one specific currency pair for simplicity's sake.
 The goal of this entire project is to learn about data pipelines, data science, machine learning and algorithmic trading. This is purely for educational purposes.
 
 ## Requirements
+Python 3.11 recommended. Unsure if it works with lower versions of python.
 First, pip install the requirements using `pip install -r requirements.txt`. This will install all the required packages.
 
 Then you must manually install `TA_Lib-0.4.24`. This is technical analysis library that I used for a key part of the bot.
+You should also manually install the correct version of `pytorch` for your system. You can find the correct version here: https://pytorch.org/get-started/locally/.
 
 ## Usage
 1. Get second by second data from Binance using `get_new_dataset.bat`. This is a batch file that will run a few python scripts to fetch, clean and feature engineer the data.
